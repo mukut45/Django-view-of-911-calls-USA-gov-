@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Fire Calls by Month</title>
+</head>
+<body>
+    <h2>Month with the Highest Fire Calls</h2>
+    <p><strong>Month:</strong> {{ max_fire_month }}</p>
+    <p><strong>Number of Fire Calls:</strong> {{ max_fire_calls }}</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Fire Calls by Month</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 15px;
+            width: 50%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        strong {
+            color: #d32f2f;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fire-icon {
+            font-size: 50px;
+            color: #ff5722;
+            animation: fireGlow 1.5s infinite alternate;
+        }
+
+        @keyframes fireGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 87, 34, 0.8);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 87, 34, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🔥 Month with the Highest Fire Calls 🚒</h2>
+    
+    <div class="card">
+        <div class="fire-icon">🔥</div>
+        <p><strong>Month:</strong> {{ max_fire_month }}</p>
+        <p><strong>Number of Fire Calls:</strong> {{ max_fire_calls }}</p>
+    </div>
+
+</body>
+</html>
